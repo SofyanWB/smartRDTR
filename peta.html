@@ -476,10 +476,94 @@
           visible: true,
           opacity: 0.6,
         });
-        const layerStrukturPetaDasar = new TileLayer({
-          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/MapServer",
-          // title: "Peta Dasar Struktur",
+        
+        // Layer Peta Dasar
+        
+        // const layerStrukturPetaDasar = new TileLayer({
+        //   url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/MapServer",
+        //   // title: "Peta Dasar Struktur",
+        // });
+        
+        const layerRelKeretaApiGaris = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/0",
+          title: "Peta Rel Kereta Api Garis",
+          visible: false,
         });
+
+        const layerJalanArea = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/1",
+          title: "Peta Jalan Area",
+          visible: false,
+        });
+
+        const layerRelKeretaApiArea = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/2",
+          title: "Peta Rel Kereta Api Area",
+          visible: false,
+        });
+
+        const layerJalanGaris = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/3",
+          title: "Peta Jalan Garis",
+          visible: false,
+        });
+
+        const layerWadukArea = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/4",
+          title: "Peta Waduk Area",
+          visible: false,
+        });
+
+        const layerRawaArea = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/5",
+          title: "Peta Rawa Area",
+          visible: false,
+        });
+
+        const layerSungaiArea = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/6",
+          title: "Peta Sungai Area",
+          visible: false,
+        });
+
+        const layerSaluranAirArea = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/7",
+          title: "Peta Saluran Air Area",
+          visible: false,
+        });
+        
+        const layerEmbungArea = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/8",
+          title: "Peta Embung Area",
+          visible: false,
+        });
+
+        const layerDanauArea = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/9",
+          title: "Peta Danau Area",
+          visible: false,
+        });
+
+        const layerSungaiGaris = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/10",
+          title: "Peta Sungai Garis",
+          visible: false,
+        });
+
+        const layerSaluranAirGaris = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/11",
+          title: "Peta Saluran Air Garis",
+          visible: false,
+        });
+
+        const layerBatasJakarta = new FeatureLayer({
+          url: "https://tataruang.jakarta.go.id/server/rest/services/peta_dasar/Peta_Dasar_DKI_Jakarta/FeatureServer/12",
+          title: "Peta Batas Jakarta",
+          visible: false,
+        });
+        
+        // End Layer Peta Dasar
+        
         //Layer Rencana Struktur Ruang
         const layerInfrastrukturTransportasi = new FeatureLayer({
           url: "https://jakartasatu.jakarta.go.id/server/rest/services/Rencana_Struktur_Ruang/FeatureServer/1",
@@ -1005,7 +1089,21 @@
         const strukturPetaDasar = new GroupLayer({
           title: "Peta Dasar Struktur",
           visible: false,
-          layers: [layerStrukturPetaDasar],
+          layers: [
+            layerRelKeretaApiGaris,
+            layerJalanArea,
+            layerRelKeretaApiArea,
+            layerJalanGaris,
+            layerWadukArea,
+            layerRawaArea,
+            layerSungaiArea,
+            layerSaluranAirArea,
+            layerEmbungArea,
+            layerDanauArea,
+            layerSungaiGaris,
+            layerSaluranAirGaris,
+            layerBatasJakarta
+          ],
           opacity: 0.75,
         });
 
